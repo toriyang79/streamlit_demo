@@ -1,7 +1,8 @@
 # hello_streamlit.py
 import streamlit as st
 import pandas as pd
-from numpy.random import default_rng as rng
+import time
+import numpy as np
 
 # 제목 추가
 st.title("🎉 내 첫 번째 Streamlit 앱!")
@@ -25,3 +26,29 @@ st.markdown(
 
 st.title("🐦 변경된 제목 v1.1")  # 버전 추가
 st.markdown("**유용한 LLM 프롬프트를 공유하는 공간입니다** ✨")  # 이모지 추가
+
+
+_LOREM_IPSUM = """
+Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+"""
+
+
+def stream_data():
+    for word in _LOREM_IPSUM.split(" "):
+        yield word + " "
+        time.sleep(0.02)
+
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
+
+    for word in _LOREM_IPSUM.split(" "):
+        yield word + " "
+        time.sleep(0.02)
+
+
+if st.button("Stream data"):
+    st.write_stream(stream_data)
