@@ -23,17 +23,5 @@ st.markdown(
     ":violet-badge[:material/star: Favorite] :orange-badge[⚠️ Needs review] :gray-badge[Deprecated]"
 )
 
-df = pd.DataFrame(rng(0).standard_normal((20, 3)), columns=["a", "b", "c"])
-
-st.area_chart(df)
-
-with st.echo():
-    st.write('This code will be printed')
-    
-st.subheader("_Streamlit_ is :blue[cool] :sunglasses:")
-st.subheader("This is a subheader with a divider", divider="gray")
-st.subheader("These subheaders have rotating dividers", divider=True)
-st.subheader("One", divider=True)
-st.subheader("Two", divider=True)
-st.subheader("Three", divider=True)
-st.subheader("Four", divider=True)
+st.title("🐦 프롬프트 트위터 v1.1")  # 버전 추가
+st.markdown("**유용한 LLM 프롬프트를 공유하는 공간입니다** ✨")  # 이모지 추가
