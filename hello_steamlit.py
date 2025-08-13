@@ -47,7 +47,7 @@ def stream_data():
 
     for word in _LOREM_IPSUM.split(" "):
         yield word + " "
-        time.sleep(0.02)
+        time.sleep(0.2)
 
 
 if st.button("버튼입니다."):
