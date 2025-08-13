@@ -23,5 +23,5 @@ st.markdown(
     ":violet-badge[:material/star: Favorite] :orange-badge[⚠️ Needs review] :gray-badge[Deprecated]"
 )
 
-st.title("🐦 프롬프트 트위터 v1.1")  # 버전 추가
+st.title("🐦 변경된 제목 v1.1")  # 버전 추가
 st.markdown("**유용한 LLM 프롬프트를 공유하는 공간입니다** ✨")  # 이모지 추가
