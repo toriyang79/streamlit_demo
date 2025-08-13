@@ -29,9 +29,9 @@ st.markdown("**유용한 LLM 프롬프트를 공유하는 공간입니다** ✨"
 
 
 _LOREM_IPSUM = """
-Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+오늘도 즐거운 하루입니다. 테스트문장이 잘 작성되고있는지 확인중입니다.
+지금 내가 무엇을 하고있는지 나도 모르겠습니다.
+언젠가는 익숙해지겠지요.
 """
 
 
@@ -50,5 +50,5 @@ def stream_data():
         time.sleep(0.02)
 
 
-if st.button("Stream data"):
+if st.button("버튼입니다."):
     st.write_stream(stream_data)
